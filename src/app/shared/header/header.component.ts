@@ -7,6 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
+routing=[
+  {"path":"","name":""}
+
+
+]
+
   constructor() { }
 
   ngOnInit() {
