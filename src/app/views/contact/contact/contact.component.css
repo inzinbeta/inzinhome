@@ -1,0 +1,8 @@
+.contact-content {
+  margin: auto;
+}
+
+.contact-sm {
+  display: flex;
+  justify-content: center;
+}
