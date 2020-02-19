@@ -1,0 +1,4 @@
+.franchise-tablist {
+  display: flex;
+  flex-direction: column;
+}
