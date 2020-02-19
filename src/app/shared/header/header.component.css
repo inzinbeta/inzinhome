@@ -1,0 +1,22 @@
+.social-font {
+  color: white;
+}
+
+.inline-details {
+  display: inline;
+  top: 0.7em;
+}
+
+.nav a {
+  text-decoration: none;
+}
+
+/* .header-fix {
+  margin: 0;
+  padding: 0;
+}
+
+.items-fix {
+  margin: 0;
+  padding: 0;
+} */

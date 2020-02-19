@@ -1,0 +1,12 @@
+.quick-link li {
+  list-style-type: none;
+}
+
+.foot-link a {
+  color: #ff3a54;
+}
+
+.foot-link a:hover {
+  color: white;
+  text-decoration: none;
+}

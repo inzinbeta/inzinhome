@@ -1,0 +1,9 @@
+.contact-social a {
+  width: 50px;
+  font-size: larger;
+}
+.contact-social {
+  padding-bottom: 25px;
+  border-radius: 5px;
+  box-shadow: 2px 8px 8px grey;
+}
