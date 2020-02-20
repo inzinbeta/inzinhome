@@ -14,43 +14,38 @@ export class CategoriesComponent implements OnInit {
   slidesStore = [
     {
       id: 1,
-      src: "assets/img/home/cat1.jpg",
-      title: "cat1"
+      src: "assets/img/home/partner1.png",
+      title: "partner1"
     },
     {
       id: 2,
-      src: "assets/img/home/cat2.jpg",
-      title: "cat2"
+      src: "assets/img/home/partner2.png",
+      title: "partner2"
     },
     {
       id: 3,
-      src: "assets/img/home/cat3.jpg",
-      title: "cat3"
+      src: "assets/img/home/partner3.png",
+      title: "partner3"
     },
     {
       id: 4,
-      src: "assets/img/home/cat4.jpg",
-      title: "cat4"
+      src: "assets/img/home/partner4.png",
+      title: "partner4"
     },
     {
       id: 5,
-      src: "assets/img/home/cat5.jpg",
-      title: "cat5"
+      src: "assets/img/home/partner5.png",
+      title: "partner5"
     },
     {
       id: 6,
-      src: "assets/img/home/cat6.jpg",
-      title: "cat6"
+      src: "assets/img/home/partner1.png",
+      title: "partner1"
     },
     {
       id: 7,
-      src: "assets/img/home/cat7.jpg",
-      title: "cat7"
-    },
-    {
-      id: 8,
-      src: "assets/img/home/cat8.jpg",
-      title: "cat8"
+      src: "assets/img/home/partner2.png",
+      title: "partner2"
     }
   ];
 
@@ -60,8 +55,8 @@ export class CategoriesComponent implements OnInit {
     mouseDrag: true,
     touchDrag: true,
     dots: false,
-    margin: 10,
-    items: 4,
+    margin: 35,
+    items: 7,
     center: true,
     autoplayTimeout: 2500
   };

@@ -4,9 +4,11 @@
 }
 
 .slide {
-  border-radius: 10px;
-  width: 150px;
-  height: 300px;
+  border-radius: 15px;
+  background-color: #ff3a54;
+  width: 100px;
+  height: 150px;
+  filter: drop-shadow(5px 8px 5px gray);
 }
 
 .img-title {
