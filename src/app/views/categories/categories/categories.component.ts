@@ -61,7 +61,7 @@ export class CategoriesComponent implements OnInit {
     touchDrag: true,
     dots: false,
     margin: 10,
-    items: 3,
+    items: 4,
     center: true,
     autoplayTimeout: 2500
   };

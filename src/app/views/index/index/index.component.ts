@@ -60,8 +60,8 @@ export class IndexComponent implements OnInit {
     mouseDrag: true,
     touchDrag: true,
     dots: false,
-    items: 3,
-    margin: 10,
+    items: 4,
+    margin: 15,
     center: true,
     autoplayTimeout: 2500
   };
