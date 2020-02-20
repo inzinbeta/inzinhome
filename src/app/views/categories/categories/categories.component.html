@@ -22,73 +22,91 @@
 <!-- page-banner ends-->
 
 <!-- listing start -->
-<section class="bg-w tri-bg sp-100-70 o-hide">
+<!-- <section class="bg-w tri-bg sp-100-70 o-hide">
   <div class="container">
     <div class="list-category-slider owl-carousel owl-theme mb-60">
-      <div class="list-items2 btn-anim">
-        <div class="icon-box">
-          <i class="flaticon-find"></i>
-        </div>
-        <h5 class="mb-0 mt-3">
-          <a href="#">Lubricant</a>
-        </h5>
-      </div>
-      <div class="list-items2 btn-anim">
-        <div class="icon-box">
-          <i class="flaticon-spa"></i>
-        </div>
-        <h5 class="mb-0 mt-3">
-          <a href="#">Grease</a>
-        </h5>
-      </div>
-      <div class="list-items2 btn-anim">
-        <div class="icon-box">
-          <i class="flaticon-cheers"></i>
-        </div>
-        <h5 class="mb-0 mt-3">
-          <a href="#">Coolant</a>
-        </h5>
-      </div>
-      <div class="list-items2 btn-anim">
-        <div class="icon-box">
-          <i class="flaticon-hotel"></i>
-        </div>
-        <h5 class="mb-0 mt-3">
-          <a href="#">Battery</a>
-        </h5>
-      </div>
-      <div class="list-items2 btn-anim">
-        <div class="icon-box">
-          <i class="flaticon-cutlery"></i>
-        </div>
-        <h5 class="mb-0 mt-3">
-          <a href="#">Auto Parts</a>
-        </h5>
-      </div>
-      <div class="list-items2 btn-anim">
-        <div class="icon-box">
-          <i class="flaticon-shop"></i>
-        </div>
-        <h5 class="mb-0 mt-3">
-          <a href="#">Tyres and Tubes</a>
-        </h5>
-      </div>
-      <div class="list-items2 btn-anim">
-        <div class="icon-box">
-          <i class="flaticon-drama"></i>
-        </div>
-        <h5 class="mb-0 mt-3">
-          <a href="#">Auto-Care Products</a>
-        </h5>
-      </div>
-      <div class="list-items2 btn-anim">
-        <div class="icon-box">
-          <i class="flaticon-drama"></i>
-        </div>
-        <h5 class="mb-0 mt-3">
-          <a href="#">Accessories</a>
-        </h5>
-      </div>
+      <owl-carousel-o [options]="customOptions">
+        <ng-template carouselSlide>
+          <div class="list-items2 btn-anim">
+            <div class="icon-box">
+              <i class="flaticon-find"></i>
+            </div>
+            <h5 class="mb-0 mt-3">
+              <a href="#">Lubricant</a>
+            </h5>
+          </div>
+        </ng-template>
+        <ng-template carouselSlide>
+          <div class="list-items2 btn-anim">
+            <div class="icon-box">
+              <i class="flaticon-spa"></i>
+            </div>
+            <h5 class="mb-0 mt-3">
+              <a href="#">Grease</a>
+            </h5>
+          </div>
+        </ng-template>
+        <ng-template carouselSlide>
+          <div class="list-items2 btn-anim">
+            <div class="icon-box">
+              <i class="flaticon-cheers"></i>
+            </div>
+            <h5 class="mb-0 mt-3">
+              <a href="#">Coolant</a>
+            </h5>
+          </div>
+        </ng-template>
+        <ng-template carouselSlide>
+          <div class="list-items2 btn-anim">
+            <div class="icon-box">
+              <i class="flaticon-hotel"></i>
+            </div>
+            <h5 class="mb-0 mt-3">
+              <a href="#">Battery</a>
+            </h5>
+          </div>
+        </ng-template>
+        <ng-template carouselSlide>
+          <div class="list-items2 btn-anim">
+            <div class="icon-box">
+              <i class="flaticon-cutlery"></i>
+            </div>
+            <h5 class="mb-0 mt-3">
+              <a href="#">Auto Parts</a>
+            </h5>
+          </div>
+        </ng-template>
+        <ng-template carouselSlide>
+          <div class="list-items2 btn-anim">
+            <div class="icon-box">
+              <i class="flaticon-shop"></i>
+            </div>
+            <h5 class="mb-0 mt-3">
+              <a href="#">Tyres and Tubes</a>
+            </h5>
+          </div>
+        </ng-template>
+        <ng-template carouselSlide>
+          <div class="list-items2 btn-anim">
+            <div class="icon-box">
+              <i class="flaticon-drama"></i>
+            </div>
+            <h5 class="mb-0 mt-3">
+              <a href="#">Auto-Care Products</a>
+            </h5>
+          </div>
+        </ng-template>
+        <ng-template carouselSlide>
+          <div class="list-items2 btn-anim">
+            <div class="icon-box">
+              <i class="flaticon-drama"></i>
+            </div>
+            <h5 class="mb-0 mt-3">
+              <a href="#">Accessories</a>
+            </h5>
+          </div>
+        </ng-template>
+      </owl-carousel-o>
     </div>
     <div class="row justify-content-md-center">
       <div class="col-lg-3 col-md-6">
@@ -114,8 +132,30 @@
       </div>
     </div>
   </div>
-</section>
+</section> -->
 <!-- listing start -->
+
+<!-- listing carousel start -->
+<div class="row slider">
+  <div class="col-12 ">
+    <div class="popular-list-slider mb-0 ">
+      <owl-carousel-o [options]="customOptions">
+        <ng-container *ngFor="let slide of slidesStore">
+          <ng-template carouselSlide [id]="slide.id">
+            <img
+              class="slide"
+              [src]="slide.src"
+              [alt]="slide.alt"
+              [title]="slide.title"
+            />
+            <h4 class="img-title">{{ slide.title }}</h4>
+          </ng-template>
+        </ng-container>
+      </owl-carousel-o>
+    </div>
+  </div>
+</div>
+<!-- lisrting carousel end -->
 
 <!-- popular listing start -->
 <section class="bg-dull sp-100-70">

@@ -186,251 +186,27 @@
 </section>
 <!-- steps-section end -->
 
-<!-- popular list start-->
-<section class="popular-list sp-100 bg-w">
-  <div class="container">
-    <div class="row">
-      <div class="col-12">
-        <div class="all-title">
-          <h3 class="sec-title">
-            premium brands
-          </h3>
-          <svg class="title-sep">
-            <path
-              fill-rule="evenodd"
-              d="M32.000,13.000 L32.000,7.000 L35.000,7.000 L35.000,13.000 L32.000,13.000 ZM24.000,4.000 L27.000,4.000 L27.000,16.000 L24.000,16.000 L24.000,4.000 ZM16.000,-0.000 L19.000,-0.000 L19.000,20.000 L16.000,20.000 L16.000,-0.000 ZM8.000,4.000 L11.000,4.000 L11.000,16.000 L8.000,16.000 L8.000,4.000 ZM-0.000,7.000 L3.000,7.000 L3.000,13.000 L-0.000,13.000 L-0.000,7.000 Z"
+<!-- carousel start -->
+<div class="row slider">
+  <div class="col-12 ">
+    <div class="popular-list-slider mb-0 ">
+      <owl-carousel-o [options]="customOptions">
+        <ng-container *ngFor="let slide of slidesStore">
+          <ng-template carouselSlide [id]="slide.id">
+            <img
+              class="slide"
+              [src]="slide.src"
+              [alt]="slide.alt"
+              [title]="slide.title"
             />
-          </svg>
-          <p>
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-            commodo ligula eget dolor penatibus ean massa. Cum sociis natoqu
-            penatibus et magnis dis parturient montes.
-          </p>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-12">
-        <div class="popular-list-slider mb-0 carousal">
-          <div class="listing-item p-2">
-            <div class="img-holder">
-              <span class="offer">save 49% </span>
-              <img src="../../../../assets/img/home/pl-slide1.jpg" alt="list" />
-              <div class="rate-like centering justify-content-between">
-                <div class="rating">
-                  <i class="fa fa-star"></i>
-                  <i class="fa fa-star"></i>
-                  <i class="fa fa-star"></i>
-                  <i class="far fa-star"></i>
-                  <i class="far fa-star"></i>
-                </div>
-                <a class="likes" href="#"> <i class="far fa-heart"></i> 4 </a>
-              </div>
-            </div>
-            <div class="list-content p-2">
-              <ul class="ctg-info py-2 mb-3">
-                <li>
-                  <a href="#">
-                    <i class="flaticon-cutlery mr-2"></i> restaurants</a
-                  >
-                </li>
-                <li>
-                  <span class="c-theme"> open now</span>
-                </li>
-              </ul>
-              <h5 class="mb-2">
-                <a href="listing-detail.html">the lounge & bar</a>
-              </h5>
-              <p>Donec pede justo, fringilla vel, aliquet nectior</p>
-              <ul class="ctg-info2 pt-2 mt-3 centering justify-content-between">
-                <li class="mt-1">
-                  <a href="#">
-                    <i class="fa fa-map-marker-alt mr-2"></i>San Francisco,
-                    USA</a
-                  >
-                </li>
-                <li class="mt-1">
-                  <a href="#"> <i class="fa fa-phone mr-2"></i>0123-456-789</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="listing-item p-2">
-            <div class="img-holder">
-              <span class="offer">save 30% </span>
-              <img src="../../../../assets/img/home/pl-slide2.jpg" alt="list" />
-              <div class="rate-like centering justify-content-between">
-                <div class="rating">
-                  <i class="fa fa-star"></i>
-                  <i class="fa fa-star"></i>
-                  <i class="far fa-star"></i>
-                  <i class="far fa-star"></i>
-                  <i class="far fa-star"></i>
-                </div>
-
-                <a class="likes" href="#"> <i class="far fa-heart"></i>3 </a>
-              </div>
-            </div>
-            <div class="list-content p-2">
-              <ul class="ctg-info py-2 mb-3">
-                <li>
-                  <a href="#"> <i class="flaticon-shop mr-2"></i>shopping</a>
-                </li>
-                <li>
-                  <span class="c-theme"> open now</span>
-                </li>
-              </ul>
-              <h5 class="mb-2">
-                <a href="listing-detail.html">the best shop in city</a>
-              </h5>
-              <p>Donec pede justo, fringilla vel, aliquet nectior</p>
-              <ul class="ctg-info2 pt-2 mt-3 centering justify-content-between">
-                <li class="mt-1">
-                  <a href="#">
-                    <i class="fa fa-map-marker-alt mr-2"></i>San Francisco,
-                    USA</a
-                  >
-                </li>
-                <li class="mt-1">
-                  <a href="#"> <i class="fa fa-phone mr-2"></i>0123-456-789</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="listing-item p-2">
-            <div class="img-holder">
-              <span class="offer">save 19% </span>
-              <img src="../../../../assets/img/home/pl-slide3.jpg" alt="list" />
-              <div class="rate-like centering justify-content-between">
-                <div class="rating">
-                  <i class="fa fa-star"></i>
-                  <i class="fa fa-star"></i>
-                  <i class="fa fa-star"></i>
-                  <i class="fa fa-star"></i>
-                  <i class="far fa-star"></i>
-                </div>
-
-                <a class="likes" href="#"> <i class="far fa-heart"></i>6 </a>
-              </div>
-            </div>
-            <div class="list-content p-2">
-              <ul class="ctg-info py-2 mb-3">
-                <li>
-                  <a href="#"> <i class="flaticon-cheers mr-2"></i>nightlife</a>
-                </li>
-                <li>
-                  <span class="c-theme"> open now</span>
-                </li>
-              </ul>
-              <h5 class="mb-2">
-                <a href="listing-detail.html">enjoy best nightlife</a>
-              </h5>
-              <p>Donec pede justo, fringilla vel, aliquet nectior</p>
-              <ul class="ctg-info2 pt-2 mt-3 centering justify-content-between">
-                <li class="mt-1">
-                  <a href="#">
-                    <i class="fa fa-map-marker-alt mr-2"></i>San Francisco,
-                    USA</a
-                  >
-                </li>
-                <li class="mt-1">
-                  <a href="#"> <i class="fa fa-phone mr-2"></i>0123-456-789</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="listing-item p-2">
-            <div class="img-holder">
-              <span class="offer">save 59% </span>
-              <img src="../../../../assets/img/home/pl-slide4.jpg" alt="list" />
-              <div class="rate-like centering justify-content-between">
-                <div class="rating">
-                  <i class="fa fa-star"></i>
-                  <i class="fa fa-star"></i>
-                  <i class="far fa-star"></i>
-                  <i class="far fa-star"></i>
-                  <i class="far fa-star"></i>
-                </div>
-
-                <a class="likes" href="#"> <i class="far fa-heart"></i> 9 </a>
-              </div>
-            </div>
-            <div class="list-content p-2">
-              <ul class="ctg-info py-2 mb-3">
-                <li>
-                  <a href="#"> <i class="flaticon-spa mr-2"></i>beauty & spa</a>
-                </li>
-                <li>
-                  <span class="c-theme"> open now</span>
-                </li>
-              </ul>
-              <h5 class="mb-2">
-                <a href="listing-detail.html">best beauty & spa services</a>
-              </h5>
-              <p>Donec pede justo, fringilla vel, aliquet nectior</p>
-              <ul class="ctg-info2 pt-2 mt-3 centering justify-content-between">
-                <li class="mt-1">
-                  <a href="#">
-                    <i class="fa fa-map-marker-alt mr-2"></i>San Francisco,
-                    USA</a
-                  >
-                </li>
-                <li class="mt-1">
-                  <a href="#"> <i class="fa fa-phone mr-2"></i>0123-456-789</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="listing-item p-2">
-            <div class="img-holder">
-              <span class="offer">save 20% </span>
-              <img src="../../../../assets/img/home/pl-slide5.jpg" alt="list" />
-              <div class="rate-like centering justify-content-between">
-                <div class="rating">
-                  <i class="fa fa-star"></i>
-                  <i class="fa fa-star"></i>
-                  <i class="fa fa-star"></i>
-                  <i class="fa fa-star"></i>
-                  <i class="fa fa-star"></i>
-                </div>
-
-                <a class="likes" href="#"> <i class="far fa-heart"></i> 14 </a>
-              </div>
-            </div>
-            <div class="list-content p-2">
-              <ul class="ctg-info py-2 mb-3">
-                <li>
-                  <a href="#">
-                    <i class="flaticon-find mr-2"></i>desitination</a
-                  >
-                </li>
-                <li>
-                  <span class="c-theme"> open now</span>
-                </li>
-              </ul>
-              <h5 class="mb-2">
-                <a href="listing-detail.html">best destinations in city</a>
-              </h5>
-              <p>Donec pede justo, fringilla vel, aliquet nectior</p>
-              <ul class="ctg-info2 pt-2 mt-3 centering justify-content-between">
-                <li class="mt-1">
-                  <a href="#">
-                    <i class="fa fa-map-marker-alt mr-2"></i>San Francisco,
-                    USA</a
-                  >
-                </li>
-                <li class="mt-1">
-                  <a href="#"> <i class="fa fa-phone mr-2"></i>0123-456-789</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
+            <h4 class="img-title">{{ slide.title }}</h4>
+          </ng-template>
+        </ng-container>
+      </owl-carousel-o>
     </div>
   </div>
-</section>
-<!-- popular list end -->
+</div>
+<!-- carousel end -->
 
 <!-- cta-one start-->
 <section class="cta-one tri-bg-w text-lg-left text-center">
