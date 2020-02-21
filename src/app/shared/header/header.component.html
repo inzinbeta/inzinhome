@@ -1,5 +1,10 @@
 <!-- ====== Go to top ====== -->
-<a id="toTop" title="Go to top" (click)="gotoTop()">
+<a
+  id="toTop"
+  title="Go to top"
+  (click)="gotoTop()"
+  style="font-size: 15px; font-weight: bold;"
+>
   <span id="toTopHover"></span>TOP
 </a>
 
@@ -74,7 +79,7 @@
             </li>
             <li class="ad-list">
               <a
-                href="/sell-with-us"
+                routerLink="/sell-with-us"
                 class="btn btn-two btn-anim"
                 style="border-radius: 25px; padding: 11px 30px 8px;"
               >
@@ -92,7 +97,7 @@
         <div class="col-lg-3 col-md-12">
           <div class="logo-one logo-wrap">
             <div class="logo my-1">
-              <a href="/">
+              <a routerLink="/">
                 <img src="assets/img/logo.png" alt="logo" />
               </a>
             </div>
@@ -125,32 +130,33 @@
                       href="javascript:void(0)"
                       class="nav-link dropdown-toggle"
                       data-toggle="dropdown"
-                      >Categories</a
                     >
+                      Categories
+                    </a>
                     <ul class="dropdown-menu">
                       <li class="dropdown-item">
-                        <a href="/automotive">Lubricants</a>
+                        <a routerLink="/automotive">Lubricants</a>
                       </li>
                       <li class="dropdown-item">
-                        <a href="#">Greases</a>
+                        <a routerLink="#">Greases</a>
                       </li>
                       <li class="dropdown-item">
-                        <a href="#">Coolant</a>
+                        <a routerLink="#">Coolant</a>
                       </li>
                       <li class="dropdown-item">
-                        <a href="#">Battery</a>
+                        <a routerLink="#">Battery</a>
                       </li>
                       <li class="dropdown-item">
-                        <a href="#">Auto Parts</a>
+                        <a routerLink="#">Auto Parts</a>
                       </li>
                       <li class="dropdown-item">
-                        <a href="#">Tyres & Tubes</a>
+                        <a routerLink="#">Tyres & Tubes</a>
                       </li>
                       <li class="dropdown-item">
-                        <a href="#">Auto Care Products</a>
+                        <a routerLink="#">Auto Care Products</a>
                       </li>
                       <li class="dropdown-item">
-                        <a href="#">Accessories</a>
+                        <a routerLink="#">Accessories</a>
                       </li>
                     </ul>
                   </li>
@@ -164,28 +170,28 @@
                     </a>
                     <ul class="dropdown-menu">
                       <li class="dropdown-item">
-                        <a href="#">lucas lubricant</a>
+                        <a routerLink="#">lucas lubricant</a>
                       </li>
                       <li class="dropdown-item">
-                        <a href="#">Pacfil Automotive Filter</a>
+                        <a routerLink="#">Pacfil Automotive Filter</a>
                       </li>
                       <li class="dropdown-item">
-                        <a href="#">G NEXT Auto Care</a>
+                        <a routerLink="#">G NEXT Auto Care</a>
                       </li>
                       <li class="dropdown-item">
-                        <a href="#">Fasten Air and Oil Filters</a>
+                        <a routerLink="#">Fasten Air and Oil Filters</a>
                       </li>
                       <li class="dropdown-item">
-                        <a href="#">Polytron Lubricant & Auto Care</a>
+                        <a routerLink="#">Polytron Lubricant & Auto Care</a>
                       </li>
                       <li class="dropdown-item">
-                        <a href="#">Fasten Auto Care</a>
+                        <a routerLink="#">Fasten Auto Care</a>
                       </li>
                       <li class="dropdown-item">
-                        <a href="#">Golden auto Lubricant</a>
+                        <a routerLink="#">Golden auto Lubricant</a>
                       </li>
                       <li class="dropdown-item">
-                        <a href="#">Gypsy Synthetic Lubricants</a>
+                        <a routerLink="#">Gypsy Synthetic Lubricants</a>
                       </li>
                     </ul>
                   </li>
@@ -209,7 +215,7 @@
                     <a
                       href="javascript:void(0)"
                       class="nav-link"
-                      routerLink="/signin"
+                      routerLink="/login"
                       data-toggle="dropdown"
                       ><i class="fa fa-user c-theme mr-2"> </i
                     ></a>

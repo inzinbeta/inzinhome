@@ -27,9 +27,9 @@ export const rootRouterConfig: Routes = [
         data: { title: "Admin" }
       },
       {
-        path: "signin",
+        path: "login",
         loadChildren: () =>
-          import("./views/signin/signin.module").then(m => m.SigninModule),
+          import("./views/login/login.module").then(m => m.LoginModule),
         data: { title: "Admin" }
       },
       {
@@ -102,7 +102,6 @@ export const rootRouterConfig: Routes = [
           import("./views/index/index.module").then(m => m.IndexModule),
         data: { title: "Admin" }
       },
-
       {
         path: "contact",
         loadChildren: () =>

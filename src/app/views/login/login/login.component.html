@@ -1,46 +1,15 @@
-<!-- Search Form -->
-<div id="search" class="top-search d-flex">
-  <span class="close">
-    <i class="fa fa-times"></i>
-  </span>
-  <div class="w-100 text-center mt-4">
-    <h3 class="c-white fw-5">search here</h3>
-    <form
-      role="search"
-      id="searchform"
-      action="#"
-      method="get"
-      class="search-bar"
-    >
-      <input
-        value=""
-        name="q"
-        type="search"
-        placeholder="type to search..."
-        class="form-control"
-      />
-      <button type="submit" class="submit-btn">
-        <i class="fa fa-search"></i>
-      </button>
-    </form>
-  </div>
-</div>
-
 <!-- page-banner start-->
 <section class="page-banner">
   <div class="container">
     <div class="row">
       <div class="col-12">
-        <h3>login / register</h3>
+        <h3>login</h3>
         <ul class="banner-link text-center">
           <li>
-            <a href="index.html">Home</a>
+            <a routerLink="/">Home</a>
           </li>
           <li>
-            <a href="javascript:void(0)">pages</a>
-          </li>
-          <li>
-            <span class="active">login / register</span>
+            <span class="active">login</span>
           </li>
         </ul>
       </div>
@@ -58,16 +27,14 @@
           <li class="nav-item">
             <a
               class="nav-link active"
-              href="#login"
+              routerlink="/login"
               role="tab"
               data-toggle="tab"
               >login</a
             >
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#register" role="tab" data-toggle="tab"
-              >register</a
-            >
+            <a class="nav-link" role="tab" data-toggle="tab">register</a>
           </li>
         </ul>
         <!-- Tab panes -->
@@ -144,7 +111,7 @@
               </div>
             </form>
           </div>
-          <div role="tabpanel" class="tab-pane fade" id="register">
+          <!-- <div role="tabpanel" class="tab-pane fade" id="register">
             <form
               class="custom-form"
               id="registerform"
@@ -215,7 +182,7 @@
                 </div>
               </div>
             </form>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>
