@@ -160,28 +160,392 @@
 <!-- steps-section end -->
 
 <!-- carousel start -->
-
-<div class="row slider">
+<!-- <div class="row slider" style="padding: 0 108px; ">
   <div class="col-12">
     <div class="popular-list-slider mb-0">
       <owl-carousel-o [options]="customOptions">
-        <ng-container *ngFor="let slide of slidesStore">
+        <ng-container *ngFor="let slide of slides">
           <ng-template carouselSlide [id]="slide.id">
-            <img
-              class="slide"
-              [src]="slide.src"
-              [alt]="slide.alt"
-              [title]="slide.title"
-            />
-            <h4 class="img-title">{{ slide.title }}</h4>
+            <div class="slider-div">
+              <img
+                class="slide"
+                [src]="slide.src"
+                [alt]="slide.alt"
+                [title]="slide.title"
+              />
+              <div class="star-rating">
+                <star-rating
+                  value="5"
+                  totalstars="5"
+                  checkedcolor="white"
+                  uncheckedcolor="red"
+                  size="24px"
+                  readonly="false"
+                  (rate)="onRate($event)"
+                ></star-rating>
+              </div>
+              <div class="likes">
+                <i class="fa fa-thumbs-up" style="padding-right: 5px"></i
+                >{{ slide.likes }}
+              </div>
+              <h4 class="img-title">{{ slide.title }}</h4>
+              <p class="img-desc">{{ slide.desc }}</p>
+            </div>
           </ng-template>
         </ng-container>
       </owl-carousel-o>
     </div>
   </div>
-</div>
-
+</div> -->
 <!-- carousel end -->
+
+<!-- popular listing start -->
+<section class="bg-dull sp-100-70">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="all-title">
+          <h3 class="sec-title">
+            popular listing
+          </h3>
+          <svg class="title-sep">
+            <path
+              fill-rule="evenodd"
+              d="M32.000,13.000 L32.000,7.000 L35.000,7.000 L35.000,13.000 L32.000,13.000 ZM24.000,4.000 L27.000,4.000 L27.000,16.000 L24.000,16.000 L24.000,4.000 ZM16.000,-0.000 L19.000,-0.000 L19.000,20.000 L16.000,20.000 L16.000,-0.000 ZM8.000,4.000 L11.000,4.000 L11.000,16.000 L8.000,16.000 L8.000,4.000 ZM-0.000,7.000 L3.000,7.000 L3.000,13.000 L-0.000,13.000 L-0.000,7.000 Z"
+            />
+          </svg>
+          <p>
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+            commodo ligula eget dolor penatibus ean massa. Cum sociis natoqu
+            penatibus et magnis dis parturient montes.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xl-4 col-lg-6 col-md-6 col-12">
+        <div class="listing-item2 mb-30">
+          <div class="img-holder">
+            <span class="offer">save 30% </span>
+            <img src="assets/img/home/pl-slide1.jpg" alt="list" />
+            <a class="likes" href="#"> <i class="far fa-heart"></i> 14 </a>
+          </div>
+          <div class="list-content">
+            <h5>
+              <a href="#">the lounge & bar</a>
+            </h5>
+            <p>Donec pede justo fringilla vel, aliquet nect</p>
+            <div class="centering justify-content-between">
+              <ul class="ctg-info">
+                <li class="my-1">
+                  <a href="#">
+                    <i class="flaticon-cutlery mr-2"></i> restaurants</a
+                  >
+                </li>
+                <li class="my-1">
+                  <span class="c-theme"> open now</span>
+                </li>
+              </ul>
+              <ul>
+                <li class="list-rating mb-1">
+                  <span> <i class="fa fa-star mr-1"></i>3.0</span>
+                </li>
+              </ul>
+            </div>
+            <ul class="ctg-info2 pt-2 mt-3 centering justify-content-between">
+              <li class="mt-1">
+                <a href="#">
+                  <i class="fa fa-map-marker-alt mr-2"></i>San Francisco, USA</a
+                >
+              </li>
+              <li class="mt-1">
+                <a href="#"> <i class="fa fa-phone mr-2"></i>0123-456-789</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-4 col-lg-6 col-md-6 col-12">
+        <div class="listing-item2 mb-30">
+          <div class="img-holder">
+            <span class="offer">save 33% </span>
+            <img src="assets/img/home/pl-slide2.jpg" alt="list" />
+            <a class="likes" href="#"> <i class="far fa-heart"></i>55 </a>
+          </div>
+          <div class="list-content">
+            <h5>
+              <a href="#">the best shop in city</a>
+            </h5>
+            <p>Donec pede justo fringilla vel, aliquet nect</p>
+            <div class="centering justify-content-between">
+              <ul class="ctg-info">
+                <li class="my-1">
+                  <a href="#"> <i class="flaticon-shop mr-2"></i>shopping</a>
+                </li>
+                <li class="my-1">
+                  <span class="c-theme"> open now</span>
+                </li>
+              </ul>
+              <ul>
+                <li class="list-rating mb-1">
+                  <span> <i class="fa fa-star mr-1"></i>2.5</span>
+                </li>
+              </ul>
+            </div>
+            <ul class="ctg-info2 pt-2 mt-3 centering justify-content-between">
+              <li class="mt-1">
+                <a href="#">
+                  <i class="fa fa-map-marker-alt mr-2"></i>San Francisco, USA</a
+                >
+              </li>
+              <li class="mt-1">
+                <a href="#"> <i class="fa fa-phone mr-2"></i>0123-456-789</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-4 col-lg-6 col-md-6 col-12">
+        <div class="listing-item2 mb-30">
+          <div class="img-holder">
+            <span class="offer">save 26% </span>
+            <img src="assets/img/home/pl-slide3.jpg" alt="list" />
+            <a class="likes" href="#"> <i class="far fa-heart"></i>31 </a>
+          </div>
+          <div class="list-content">
+            <h5>
+              <a href="#">enjoy best nightlife</a>
+            </h5>
+            <p>Donec pede justo fringilla vel, aliquet nect</p>
+            <div class="centering justify-content-between">
+              <ul class="ctg-info">
+                <li class="my-1">
+                  <a href="#"> <i class="flaticon-cheers mr-2"></i>nightlife</a>
+                </li>
+                <li class="my-1">
+                  <span class="c-theme"> open now</span>
+                </li>
+              </ul>
+              <ul>
+                <li class="list-rating mb-1">
+                  <span> <i class="fa fa-star mr-1"></i>3.2</span>
+                </li>
+              </ul>
+            </div>
+            <ul class="ctg-info2 pt-2 mt-3 centering justify-content-between">
+              <li class="mt-1">
+                <a href="#">
+                  <i class="fa fa-map-marker-alt mr-2"></i>San Francisco, USA</a
+                >
+              </li>
+              <li class="mt-1">
+                <a href="#"> <i class="fa fa-phone mr-2"></i>0123-456-789</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-4 col-lg-6 col-md-6 col-12">
+        <div class="listing-item2 mb-30">
+          <div class="img-holder">
+            <span class="offer">save 22% </span>
+            <img src="assets/img/home/pl-slide4.jpg" alt="list" />
+            <a class="likes" href="#"> <i class="far fa-heart"></i>05 </a>
+          </div>
+          <div class="list-content">
+            <h5>
+              <a href="#">best beauty & spa services</a>
+            </h5>
+            <p>Donec pede justo fringilla vel, aliquet nect</p>
+            <div class="centering justify-content-between">
+              <ul class="ctg-info">
+                <li class="my-1">
+                  <a href="#">
+                    <i class="flaticon-spa mr-2"></i>beauty &amp; spa</a
+                  >
+                </li>
+                <li class="my-1">
+                  <span class="c-theme"> open now</span>
+                </li>
+              </ul>
+              <ul>
+                <li class="list-rating mb-1">
+                  <span> <i class="fa fa-star mr-1"></i>4.6</span>
+                </li>
+              </ul>
+            </div>
+            <ul class="ctg-info2 pt-2 mt-3 centering justify-content-between">
+              <li class="mt-1">
+                <a href="#">
+                  <i class="fa fa-map-marker-alt mr-2"></i>San Francisco, USA</a
+                >
+              </li>
+              <li class="mt-1">
+                <a href="#"> <i class="fa fa-phone mr-2"></i>0123-456-789</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-4 col-lg-6 col-md-6 col-12">
+        <div class="listing-item2 mb-30">
+          <div class="img-holder">
+            <span class="offer">save 29% </span>
+            <img src="assets/img/home/pl-slide5.jpg" alt="list" />
+            <a class="likes" href="#"> <i class="far fa-heart"></i>36 </a>
+          </div>
+          <div class="list-content">
+            <h5>
+              <a href="#">best destinations in city</a>
+            </h5>
+            <p>Donec pede justo fringilla vel, aliquet nect</p>
+            <div class="centering justify-content-between">
+              <ul class="ctg-info">
+                <li class="my-1">
+                  <a href="#">
+                    <i class="flaticon-find mr-2"></i>desitination</a
+                  >
+                </li>
+                <li class="my-1">
+                  <span class="c-theme"> open now</span>
+                </li>
+              </ul>
+              <ul>
+                <li class="list-rating mb-1">
+                  <span> <i class="fa fa-star mr-1"></i>3.5</span>
+                </li>
+              </ul>
+            </div>
+            <ul class="ctg-info2 pt-2 mt-3 centering justify-content-between">
+              <li class="mt-1">
+                <a href="#">
+                  <i class="fa fa-map-marker-alt mr-2"></i>San Francisco, USA</a
+                >
+              </li>
+              <li class="mt-1">
+                <a href="#"> <i class="fa fa-phone mr-2"></i>0123-456-789</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-4 col-lg-6 col-md-6 col-12">
+        <div class="listing-item2 mb-30">
+          <div class="img-holder">
+            <span class="offer">save 49% </span>
+            <img src="assets/img/home/pl-slide6.jpg" alt="list" />
+            <a class="likes" href="#"> <i class="far fa-heart"></i>61 </a>
+          </div>
+          <div class="list-content">
+            <h5>
+              <a href="#">best hotels in town</a>
+            </h5>
+            <p>Donec pede justo fringilla vel, aliquet nect</p>
+            <div class="centering justify-content-between">
+              <ul class="ctg-info">
+                <li class="my-1">
+                  <a href="#"> <i class="flaticon-hotel mr-2"></i>hotels</a>
+                </li>
+                <li class="my-1">
+                  <span class="c-theme"> open now</span>
+                </li>
+              </ul>
+              <ul>
+                <li class="list-rating mb-1">
+                  <span> <i class="fa fa-star mr-1"></i>4.0</span>
+                </li>
+              </ul>
+            </div>
+            <ul class="ctg-info2 pt-2 mt-3 centering justify-content-between">
+              <li class="mt-1">
+                <a href="#">
+                  <i class="fa fa-map-marker-alt mr-2"></i>San Francisco, USA</a
+                >
+              </li>
+              <li class="mt-1">
+                <a href="#"> <i class="fa fa-phone mr-2"></i>0123-456-789</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- popular listing start -->
+
+<!-- brand listing start -->
+<!-- <section>
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="all-title">
+          <h3 class="sec-title">
+            popular listing
+          </h3>
+          <svg class="title-sep">
+            <path
+              fill-rule="evenodd"
+              d="M32.000,13.000 L32.000,7.000 L35.000,7.000 L35.000,13.000 L32.000,13.000 ZM24.000,4.000 L27.000,4.000 L27.000,16.000 L24.000,16.000 L24.000,4.000 ZM16.000,-0.000 L19.000,-0.000 L19.000,20.000 L16.000,20.000 L16.000,-0.000 ZM8.000,4.000 L11.000,4.000 L11.000,16.000 L8.000,16.000 L8.000,4.000 ZM-0.000,7.000 L3.000,7.000 L3.000,13.000 L-0.000,13.000 L-0.000,7.000 Z"
+            />
+          </svg>
+          <p>
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+            commodo ligula eget dolor penatibus ean massa. Cum sociis natoqu
+            penatibus et magnis dis parturient montes.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xl-4 col-lg-6 col-md-6 col-12">
+        <div class="listing-item2 mb-30">
+          <div *ngFor="let slide of slides">
+            <div class="img-holder">
+              <span class="offer">save 30% </span> 
+              <img [src]="slide.src" alt="list" />
+            </div>
+            <div class="list-content">
+              <h5>
+                <a href="#">{{ slide.title }}</a>
+              </h5>
+              <p>{{ slide.desc }}</p>
+              <div class="centering justify-content-between">
+                <ul class="ctg-info">
+                  <li class="my-1">
+                    <a href="#">
+                      <i class="flaticon-cutlery mr-2"></i> category</a
+                    >
+                  </li>
+                  <li class="my-1">
+                    <span class="c-theme"> open now</span>
+                  </li>
+                </ul>
+                 <ul>
+                    <li class="list-rating mb-1">
+                      <span> <i class="fa fa-star mr-1"></i>3.0</span>
+                    </li>
+                  </ul>
+              </div>
+              <ul class="ctg-info2 pt-2 mt-3 centering justify-content-between">
+                <li class="mt-1">
+                  <a href="#">
+                    <i class="fa fa-map-marker-alt mr-2"></i>San Francisco,
+                    USA</a
+                  >
+                </li>
+                <li class="mt-1">
+                  <a href="#"> <i class="fa fa-phone mr-2"></i>0123-456-789</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+<!-- brand listing end -->
 
 <!-- cta-one start-->
 <section class="cta-one tri-bg-w text-lg-left text-center">
@@ -457,276 +821,3 @@
   </div>
 </section>
 <!-- categories end -->
-
-<!-- partner start-->
-<!-- <div class="partner-one bg-red py-5">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <div class="partner-slider owl-carousel owl-theme">
-          <div class="partner-slide">
-            <img src="../../../../assets/img/home/partner1.png" alt="partner" />
-          </div>
-          <div class="partner-slide">
-            <img src="../../../../assets/img/home/partner2.png" alt="partner" />
-          </div>
-          <div class="partner-slide">
-            <img src="../../../../assets/img/home/partner3.png" alt="partner" />
-          </div>
-          <div class="partner-slide">
-            <img src="../../../../assets/img/home/partner4.png" alt="partner" />
-          </div>
-          <div class="partner-slide">
-            <img src="../../../../assets/img/home/partner5.png" alt="partner" />
-          </div>
-          <div class="partner-slide">
-            <img src="../../../../assets/img/home/partner1.png" alt="partner" />
-          </div>
-          <div class="partner-slide">
-            <img src="../../../../assets/img/home/partner2.png" alt="partner" />
-          </div>
-          <div class="partner-slide">
-            <img src="../../../../assets/img/home/partner3.png" alt="partner" />
-          </div>
-          <div class="partner-slide">
-            <img src="../../../../assets/img/home/partner4.png" alt="partner" />
-          </div>
-          <div class="partner-slide">
-            <img src="../../../../assets/img/home/partner5.png" alt="partner" />
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div> -->
-<!-- partner end-->
-
-<!-- blog start-->
-<!-- <section class="sp-100 bg-w">
-  <div class="container">
-    <div class="row">
-      <div class="col-12">
-        <div class="all-title">
-          <h3 class="sec-title">
-            from our blog
-          </h3>
-          <svg class="title-sep">
-            <path
-              fill-rule="evenodd"
-              d="M32.000,13.000 L32.000,7.000 L35.000,7.000 L35.000,13.000 L32.000,13.000 ZM24.000,4.000 L27.000,4.000 L27.000,16.000 L24.000,16.000 L24.000,4.000 ZM16.000,-0.000 L19.000,-0.000 L19.000,20.000 L16.000,20.000 L16.000,-0.000 ZM8.000,4.000 L11.000,4.000 L11.000,16.000 L8.000,16.000 L8.000,4.000 ZM-0.000,7.000 L3.000,7.000 L3.000,13.000 L-0.000,13.000 L-0.000,7.000 Z"
-            />
-          </svg>
-          <p>
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-            commodo ligula eget dolor penatibus ean massa. Cum sociis natoqu
-            penatibus et magnis dis parturient montes.
-          </p>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-xl-4 col-lg-6 col-md-6 col-12">
-        <div
-          class="blog-item blog-1"
-          style="background-image:url('../../../../assets/img/blog/blog1.png')"
-        >
-          <div class="blog-date p-2">
-            <span>11 april 2019</span>
-          </div>
-          <div class="blog-content">
-            <h5>
-              <a href="blog-detail.html"
-                >Nullam quis ante tiam sit ame orci eget erovtiu faucid nbys</a
-              >
-            </h5>
-            <ul
-              class="blog-meta d-flex justify-content-between align-items-center"
-            >
-              <li>
-                <span class="mr-1">
-                  <img src="../../../../assets/img/blog/aut-1.png" alt="#" />
-                </span>
-                <a href="#">Johnathan Doe</a>
-              </li>
-              <li>
-                <a href="#">
-                  <i class="fa fa-eye mr-1"></i>
-                  20
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="col-xl-4 col-lg-6 col-md-6 col-12">
-        <div
-          class="blog-item blog-1"
-          style="background-image:url('../../../../assets/img/blog/blog2.png')"
-        >
-          <div class="blog-date p-2">
-            <span>21 april 2019</span>
-          </div>
-          <div class="blog-content">
-            <h5>
-              <a href="blog-detail.html"
-                >Nullam quis ante tiam sit ame orci eget erovtiu faucid nbys</a
-              >
-            </h5>
-            <ul
-              class="blog-meta d-flex justify-content-between align-items-center"
-            >
-              <li>
-                <span class="mr-1">
-                  <img src="../../../../assets/img/blog/aut-2.png" alt="#" />
-                </span>
-                <a href="#">Alicia Thomas</a>
-              </li>
-              <li>
-                <a href="#">
-                  <i class="fa fa-eye mr-1"></i>
-                  20
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="col-xl-4 col-lg-6 col-md-6 col-12">
-        <div
-          class="blog-item blog-1"
-          style="background-image:url('../../../../assets/img/blog/blog3.png')"
-        >
-          <div class="blog-date p-2">
-            <span>01 april 2019</span>
-          </div>
-          <div class="blog-content">
-            <h5>
-              <a href="blog-detail.html"
-                >Nullam quis ante tiam sit ame orci eget erovtiu faucid nbys</a
-              >
-            </h5>
-            <ul
-              class="blog-meta d-flex justify-content-between align-items-center"
-            >
-              <li>
-                <span class="mr-1">
-                  <img src="../../../../assets/img/blog/aut-3.png" alt="#" />
-                </span>
-                <a href="#">Johnis Doe</a>
-              </li>
-              <li>
-                <a href="#">
-                  <i class="fa fa-eye mr-1"></i>
-                  20
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="col-xl-3 col-lg-6 col-md-6 col-12">
-        <div
-          class="blog-item blog-1"
-          style="background-image:url('../../../../assets/img/blog/blog4.png')"
-        >
-          <div class="blog-date p-2">
-            <span>09 april 2019</span>
-          </div>
-          <div class="blog-content">
-            <h5>
-              <a href="blog-detail.html"
-                >Nullam quis ante tiam sit ame orci liamco non.</a
-              >
-            </h5>
-            <ul
-              class="blog-meta d-flex justify-content-between align-items-center"
-            >
-              <li>
-                <span class="mr-1">
-                  <img src="../../../../assets/img/blog/aut-1.png" alt="#" />
-                </span>
-                <a href="#">Johnas Doe</a>
-              </li>
-              <li>
-                <a href="#">
-                  <i class="fa fa-eye mr-1"></i>
-                  20
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="col-xl-6 col-lg-6 col-md-6 col-12">
-        <div
-          class="blog-item blog-1"
-          style="background-image:url('../../../../assets/img/blog/blog5.png')"
-        >
-          <div class="blog-date p-2">
-            <span>15 april 2019</span>
-          </div>
-          <div class="blog-content">
-            <h5>
-              <a href="blog-detail.html"
-                >Amet incididunt tempor aliqua mollit magna proident sit amet
-                elit nostrud.
-              </a>
-            </h5>
-            <ul
-              class="blog-meta d-flex justify-content-between align-items-center"
-            >
-              <li>
-                <span class="mr-1">
-                  <img src="../../../../assets/img/blog/aut-3.png" alt="#" />
-                </span>
-                <a href="#">Alexi Johnas </a>
-              </li>
-              <li>
-                <a href="#">
-                  <i class="fa fa-eye mr-1"></i>
-                  20
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="col-xl-3 col-lg-6 col-md-6 col-12">
-        <div
-          class="blog-item blog-1"
-          style="background-image:url('../../../../assets/img/blog/blog6.png')"
-        >
-          <div class="blog-date p-2">
-            <span>13 april 2019</span>
-          </div>
-          <div class="blog-content">
-            <h5>
-              <a href="blog-detail.html"
-                >Nullam quis ante tiam sit ame orci liamco non.</a
-              >
-            </h5>
-            <ul
-              class="blog-meta d-flex justify-content-between align-items-center"
-            >
-              <li>
-                <span class="mr-1">
-                  <img src="../../../../assets/img/blog/aut-2.png" alt="#" />
-                </span>
-                <a href="#">sehny Doe</a>
-              </li>
-              <li>
-                <a href="#">
-                  <i class="fa fa-eye mr-1"></i>
-                  20
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="col-12 text-center mt-30">
-        <a href="#" class="btn btn-one btn-anim">view all</a>
-      </div>
-    </div>
-  </div>
-</section> -->
