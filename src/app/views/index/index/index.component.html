@@ -200,7 +200,7 @@
 <!-- carousel end -->
 
 <!-- popular listing start -->
-<section class="bg-dull sp-100-70">
+<!-- <section class="bg-dull sp-100-70">
   <div class="container">
     <div class="row">
       <div class="col-12">
@@ -471,11 +471,11 @@
       </div>
     </div>
   </div>
-</section>
+</section> -->
 <!-- popular listing start -->
 
 <!-- brand listing start -->
-<!-- <section>
+<section>
   <div class="container">
     <div class="row">
       <div class="col-12">
@@ -498,53 +498,53 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-xl-4 col-lg-6 col-md-6 col-12">
+      <div
+        class="col-xl-4 col-lg-6 col-md-6 col-12"
+        *ngFor="let slide of slides"
+      >
         <div class="listing-item2 mb-30">
-          <div *ngFor="let slide of slides">
-            <div class="img-holder">
-              <span class="offer">save 30% </span> 
-              <img [src]="slide.src" alt="list" />
-            </div>
-            <div class="list-content">
-              <h5>
-                <a href="#">{{ slide.title }}</a>
-              </h5>
-              <p>{{ slide.desc }}</p>
-              <div class="centering justify-content-between">
-                <ul class="ctg-info">
-                  <li class="my-1">
-                    <a href="#">
-                      <i class="flaticon-cutlery mr-2"></i> category</a
-                    >
-                  </li>
-                  <li class="my-1">
-                    <span class="c-theme"> open now</span>
-                  </li>
-                </ul>
-                 <ul>
-                    <li class="list-rating mb-1">
-                      <span> <i class="fa fa-star mr-1"></i>3.0</span>
-                    </li>
-                  </ul>
-              </div>
-              <ul class="ctg-info2 pt-2 mt-3 centering justify-content-between">
-                <li class="mt-1">
+          <div class="img-holder">
+            <span class="offer">save 30% </span>
+            <img [src]="slide.src" alt="list" />
+          </div>
+          <div class="list-content">
+            <h5>
+              <a href="#">{{ slide.title }}</a>
+            </h5>
+            <p>{{ slide.desc }}</p>
+            <div class="centering justify-content-between">
+              <ul class="ctg-info">
+                <li class="my-1">
                   <a href="#">
-                    <i class="fa fa-map-marker-alt mr-2"></i>San Francisco,
-                    USA</a
+                    <i class="flaticon-cutlery mr-2"></i> category</a
                   >
                 </li>
-                <li class="mt-1">
-                  <a href="#"> <i class="fa fa-phone mr-2"></i>0123-456-789</a>
+                <li class="my-1">
+                  <span class="c-theme"> open now</span>
+                </li>
+              </ul>
+              <ul>
+                <li class="list-rating mb-1">
+                  <span> <i class="fa fa-star mr-1"></i>3.0</span>
                 </li>
               </ul>
             </div>
+            <ul class="ctg-info2 pt-2 mt-3 centering justify-content-between">
+              <li class="mt-1">
+                <a href="#">
+                  <i class="fa fa-map-marker-alt mr-2"></i>San Francisco, USA</a
+                >
+              </li>
+              <li class="mt-1">
+                <a href="#"> <i class="fa fa-phone mr-2"></i>0123-456-789</a>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
     </div>
   </div>
-</section> -->
+</section>
 <!-- brand listing end -->
 
 <!-- cta-one start-->
