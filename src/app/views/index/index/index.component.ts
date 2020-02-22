@@ -1,6 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 //import { OwlOptions } from "ngx-owl-carousel-o";
-import { StarRatingComponent } from "ng-starrating";
+//import { StarRatingComponent } from "ng-starrating";
 
 @Component({
   selector: "app-index",
